@@ -121,7 +121,7 @@ html, body {
     grid-column: 3/5;
     width: 30%;
     height: 10%;
-    background-color: rgb(21, 189, 97);
+    background-color: #15bd61;
     align-self: center;
     justify-self: center;
     border-radius: 50px;
@@ -144,6 +144,22 @@ html, body {
     font-family: Varela Round;
     font-size: 2vw;
     user-select: none;
+}
+
+#score {
+    position: absolute;
+    grid-column: 3/5;
+    grid-row: 2;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+    align-self: center;
+    transform: translateY(475%);
+    color: white;
+    font-family: Varela Round;
+    font-size: 2vw;
+    z-index: 1243;
+    text-shadow: -3px 3px rgb(170, 170, 170);
 }
 
 @keyframes fade-in {
@@ -265,7 +281,7 @@ html, body {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 100%;
     justify-self: center;
-    display: grid;
+    display: none;
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
 }
@@ -373,4 +389,43 @@ html, body {
 
 #lower:hover::before {
     clip-path: circle(100%);
+}
+
+#correct {
+    width: 12vh;
+    height: 12vh;
+    background-color: #15bd61;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    clip-path: circle(0%);
+    transition: clip-path 500ms ease-in-out;
+}
+
+#correct div {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 5vh;
+    width: 2vh;
+    margin-left: 40%; 
+    margin-top: 20%;
+    border-bottom: 1vh solid #fff;
+    border-right: 1vh solid #fff;
+}
+
+#count {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 123;
+    color: white;
+    font-family: Varela Round;
+    font-size: 3vw;
+    top: 92%;
+    left: 95%;
+    margin-bottom: -5%;
+    margin-right: -5%;
 }
